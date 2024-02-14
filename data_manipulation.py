@@ -32,3 +32,21 @@ def deleteList(list, item_to_delete):
         return list
     else:
         print(f"{item_to_delete} not found in the list")
+
+
+
+#home work 1
+        def mergeStrings(list, word):
+            """
+            Using the list given and the word as function parameters, write a function that creates same word from the list. by mergin the contents of the string together
+
+            example:
+            list = ["c","a","t","d","b","e"]
+            word = "cat"
+
+            return
+            -----------
+            cat
+            """
+
+    

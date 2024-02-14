@@ -31,6 +31,15 @@ def updateFullname():
 def getAge():
     return age
 
+
+printUserName()
+getFullname()
+fullname = updateFullname()
+
+getAge()
+
+
+# Classwork 1
 def userDateOfBirth(age):
     """
     Write a simple function that returns the dob from the age provided
@@ -39,14 +48,24 @@ def userDateOfBirth(age):
     -------
     dob. e.g. 1984 or 1995. It should be a number value.
     """
+
+# Class work 2
 def printFullname(fullname):
     """
     Write a simple function that prints the users' fullname it.
     """
 
-
-printUserName()
-getFullname()
-fullname = updateFullname()
 printFullname(fullname=fullname)
-getAge()
+
+#class work 3
+def firstName(fullname):
+    """
+    Write a function that returns only the first name of the fullname given, using text maninpulation
+
+    Use: https://docs.python.org/3/tutorial/introduction.html#text
+
+    Return
+    ----------
+
+    name String
+    """

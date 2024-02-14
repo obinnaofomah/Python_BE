@@ -12,5 +12,6 @@ class WelcomeToPythonBootcamp:
 
         3. You'll be taught the programming parts, but developing your problem solving skills, analytical and critical thinking is also important
 
+        4. Use this link https://docs.python.org/3/tutorial/introduction.html#text to learn about python programming, some examples will be taken from here
         Good Luck
         """
