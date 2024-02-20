@@ -54,7 +54,7 @@ def userDateOfBirth(age):
 # Class work 2: Function with parameter
 def printFullname(fullname):
     """
-    Write a simple function that prints the users' fullname it.
+    Write a simple function that prints the users' fullname .
     """
 
 printFullname(fullname=fullname)
