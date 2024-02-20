@@ -9,6 +9,7 @@ Different Types of Loops:
 """
 
 fruits = ['apple', 'banana', 'orange']
+len(fruits) # size or length of the array
 for fruit in fruits:
     print(fruit)
 
@@ -56,6 +57,8 @@ else:
         """
         Write a function that prints all prime number up to 100.
         
+        Hint: Use the loop statement to loop through the range(100) and write the mathematical condition for prime numbers to just print if that condition is true
+
         returns 
         -------
         null
@@ -65,6 +68,7 @@ else:
         """
         Do the same using one of the loop functions above to write a function to prints all even numbers up to 1000.
 
+        Hint: An even number is one divisible by 2: Condition n % 2 == 0
         returns
         ----------
         null
