@@ -66,7 +66,7 @@ flag = False
 if not flag:
     print("Using `not` keyword: flag is False")
 
-# Using `elif` without a condition (acts like `else`)
+
 value = 42
 if value > 50:
     print("Value is greater than 50")

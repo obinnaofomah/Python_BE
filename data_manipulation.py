@@ -36,17 +36,17 @@ def deleteList(list, item_to_delete):
 
 
 #home work 1
-        def mergeStrings(list, word):
-            """
-            Using the list given and the word as function parameters, write a function that creates same word from the list. by mergin the contents of the string together
+    def mergeStrings(list, word):
+        """
+        Using the list given and the word as function parameters, write a function that creates same word from the list. by mergin the contents of the string together
 
-            example:
-            list = ["c","a","t","d","b","e"]
-            word = "cat"
+        example:
+        list = ["c","a","t","d","b","e"]
+        word = "cat"
 
-            return
-            -----------
-            cat
-            """
-
+        return
+        -----------
+        cat
+        """
+    
     
