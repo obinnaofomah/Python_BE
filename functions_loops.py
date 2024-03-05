@@ -8,8 +8,8 @@ Different Types of Loops:
 6. else statements
 """
 
-fruits = ['apple', 'banana', 'orange']
-len(fruits) # size or length of the array
+fruits = ["apple", "banana", "orange"]
+len(fruits)  # size or length of the array
 for fruit in fruits:
     print(fruit)
 
@@ -44,25 +44,32 @@ for i in range(5):
 else:
     print("Loop completed")
 
-
-
-# First Home_work
+    # First Home_work
     def printStudentNames(students):
-        """Using one of the loop statements stated above. Write a function logic that prints each students 
-        
+        """Using one of the loop statements stated above. Write a function logic that prints each students
+
         students = ["Mark", "Kingsley", "Jacob", "Augustine", "Rita", "Precious", "Sarah", "Philip", "Treasure", "Matthew", "Jesus", "Aguero", "Ronaldo", "Lopez"]
         """
+        for student in students:
+            print(student)
 
     def primeNumbers():
         """
         Write a function that prints all prime number up to 100.
-        
+
         Hint: Use the loop statement to loop through the range(100) and write the mathematical condition for prime numbers to just print if that condition is true
 
-        returns 
+        returns
         -------
         null
         """
+
+        for number in range(2, 100):
+            for factor in range(2, number):
+                if number % factor == 0:
+                    break
+            else:
+                print(number)
 
     def evenNumbers():
         """
@@ -73,5 +80,6 @@ else:
         ----------
         null
         """
-
-    
+        for number in range(1000):
+            if number % 2 == 0:
+                print(number)
