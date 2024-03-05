@@ -106,8 +106,13 @@ def string_converter(string_word):
         str_value = str(alpha_dict.get(element))
         num_str += str_value
 
-    for number in num_str:
-        if int(number) & 2 == 1:
-            num_rep += number
+    for element in num_str:
+        if int(element) % 2 == 0:
+            pass
+        else:
+            num_rep += element
 
-    return int(num_rep)
+    return num_rep
+
+
+print(string_converter("age"))
