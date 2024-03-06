@@ -1,4 +1,4 @@
-def list_converter(scattered_list):
+def list_converter(scrambled_list, target_word):
     """
     Question 1
     Write a function that converts a scattered list to become a word
@@ -12,16 +12,13 @@ def list_converter(scattered_list):
     String
 
     """
-    new_word = ""
-    shuffled_str = "".join(scattered_list).lower()
-    target_word = input("Enter the target word:  ").lower()
 
-    for element in target_word:
-        if element in shuffled_str:
+    new_word = ""
+    for element in target_word.lower():
+        if element in "".join(scrambled_list).lower():
             new_word += element
         else:
-            print(f"{element} not in {shuffled_str}")
-            break
+            return "word not found"
 
     return new_word
 
@@ -115,4 +112,4 @@ def string_converter(string_word):
     return num_rep
 
 
-print(string_converter("age"))
+print(list_converter(["h", "l", "m", "u", "b", "e", "m"], "hum"))
