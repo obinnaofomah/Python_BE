@@ -45,7 +45,9 @@ def word_generator(scrambled_list):
 
     while True:
         new_word = ""
-        target_word = input("Enter the new word to be formed OR PRESS 2 TO TERMINATE")
+        target_word = input(
+            "Enter the new word to be formed OR PRESS 2 TO TERMINATE:  "
+        )
         if target_word == "2":
             break
         else:
@@ -114,4 +116,8 @@ def string_converter(string_word):
     return num_rep
 
 
-print(list_converter(["h", "l", "m", "u", "b", "e", "m"], "hum"))
+print(
+    word_generator(
+        ["a", "p", "l", "r", "u", "i", "t", "s", "h", "e", "n", "g", "o", "f"]
+    )
+)
