@@ -1,4 +1,3 @@
-
 def printGroceryLists(list):
     """
     This function collects the grocery lists as a parameter and prints out the different items in the lists to the user.
@@ -7,6 +6,7 @@ def printGroceryLists(list):
     """
     for grocery in list:
         print(grocery)
+
 
 def updateList(list, item):
     """
@@ -18,6 +18,7 @@ def updateList(list, item):
     """
     list.append(item)
     return list
+
 
 def deleteList(list, item_to_delete):
     """
@@ -34,19 +35,26 @@ def deleteList(list, item_to_delete):
         print(f"{item_to_delete} not found in the list")
 
 
+# home work 1
+def mergeStrings(list, word):
+    """
+    Using the list given and the word as function parameters, write a function that creates same word from the list. by mergin the contents of the string together
 
-#home work 1
-    def mergeStrings(list, word):
-        """
-        Using the list given and the word as function parameters, write a function that creates same word from the list. by mergin the contents of the string together
+    example:
+    list = ["c","a","t","d","b","e"]
+    word = "cat"
 
-        example:
-        list = ["c","a","t","d","b","e"]
-        word = "cat"
+    return
+    -----------
+    cat
+    """
+    new_str = ""
+    for element in word:
+        if element in list:
+            new_str += element
+        else:
+            return f"{element} not found"
+    return new_str
 
-        return
-        -----------
-        cat
-        """
-    
-    
+
+print(mergeStrings(["c", "a", "t", "d", "b", "e"], "tam"))
