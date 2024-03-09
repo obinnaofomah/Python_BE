@@ -14,10 +14,12 @@ def list_converter(scrambled_list, target_word):
     """
 
     new_word = ""
-    scrambled_str = "".join(scrambled_list).lower()
+
+    for i in range(len(scrambled_list)):
+        scrambled_list[i] = scrambled_list[i].lower()
 
     for element in target_word.lower():
-        if element in scrambled_str:
+        if element in scrambled_list:
             new_word += element
         else:
             return "word not found"
