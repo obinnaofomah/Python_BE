@@ -50,7 +50,6 @@ def word_generator(scrambled_list, target_words):
 
         for character in word.lower():
             if character not in scrambled_list:
-                print(f"{character} not in {scrambled_list}")
                 break
             else:
                 new_word += character
