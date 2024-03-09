@@ -72,52 +72,21 @@ def string_converter(string_word):
     dog = 4157 = 157
 
     """
-    alpha_dict = {
-        "a": 1,
-        "b": 2,
-        "c": 3,
-        "d": 4,
-        "e": 5,
-        "f": 6,
-        "g": 7,
-        "h": 8,
-        "i": 9,
-        "j": 10,
-        "k": 11,
-        "l": 12,
-        "m": 13,
-        "n": 14,
-        "o": 15,
-        "p": 16,
-        "q": 17,
-        "r": 18,
-        "s": 19,
-        "t": 20,
-        "u": 21,
-        "v": 22,
-        "w": 23,
-        "x": 24,
-        "y": 25,
-        "z": 26,
-    }
-    num_str = ""
     num_rep = ""
+    num_value = ""
+    alpha_list = list("abcdefghijklmnopqrstuvwxyz")
 
     for element in string_word:
-        str_value = str(alpha_dict.get(element))
-        num_str += str_value
+        for idx, character in enumerate(alpha_list, start=1):
+            if character == element:
+                num_rep += str(idx)
+                break
 
-    for element in num_str:
-        if int(element) % 2 == 0:
-            pass
-        else:
-            num_rep += element
+    for value in num_rep:
+        if int(value) % 2 == 1:
+            num_value += value
 
-    return num_rep
+    return num_value
 
 
-print(
-    word_generator(
-        ["a", "p", "l", "r", "u", "i", "t", "s", "h", "e", "n", "g", "o", "f"]
-    )
-)
+print(string_converter("dog"))
