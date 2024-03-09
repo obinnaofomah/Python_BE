@@ -25,7 +25,7 @@ def list_converter(scrambled_list, target_word):
     return new_word
 
 
-def word_generator(scrambled_list):
+def word_generator(scrambled_list, target_words):
     """
     Question 2
 
@@ -41,23 +41,25 @@ def word_generator(scrambled_list):
     """
 
     word_list = []
-    scrambled_str = "".join(scrambled_list).lower()
 
-    while True:
+    for i in range(len(scrambled_list)):
+        scrambled_list[i] = scrambled_list[i].lower()
+
+    for word in target_words:
         new_word = ""
-        target_word = input(
-            "Enter the new word to be formed OR PRESS 2 TO TERMINATE:  "
-        )
-        if target_word == "2":
-            break
-        else:
-            for character in target_word:
-                if character in scrambled_str:
-                    new_word += character
-                else:
-                    print(f"{character} not in {scrambled_list}")
-                    break
-            word_list.append(target_word)
+
+        for character in word.lower():
+            if character not in scrambled_list:
+                print(f"{character} not in {scrambled_list}")
+                break
+            else:
+                new_word += character
+
+        word_list.append(new_word)
+
+    for word in word_list:
+        if len(word) == 0:
+            word_list.remove(word)
 
     return word_list
 
@@ -76,7 +78,7 @@ def string_converter(string_word):
     num_value = ""
     alpha_list = list("abcdefghijklmnopqrstuvwxyz")
 
-    for element in string_word:
+    for element in string_word.lower():
         for idx, character in enumerate(alpha_list, start=1):
             if character == element:
                 num_rep += str(idx)
@@ -89,4 +91,9 @@ def string_converter(string_word):
     return num_value
 
 
-print(string_converter("dog"))
+print(
+    word_generator(
+        ["a", "p", "l", "r", "u", "i", "t", "s", "h", "e", "n", "g", "o", "f"],
+        ["apple", "fruits", "mango", "heal"],
+    )
+)
