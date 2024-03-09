@@ -50,6 +50,7 @@ def word_generator(scrambled_list, target_words):
 
         for character in word.lower():
             if character not in scrambled_list:
+                print(f"{character} not in {word}")
                 break
             else:
                 new_word += character
@@ -77,11 +78,9 @@ def string_converter(string_word):
     num_value = ""
     alpha_list = list("abcdefghijklmnopqrstuvwxyz")
 
-    for element in string_word.lower():
-        for idx, character in enumerate(alpha_list, start=1):
-            if character == element:
-                num_rep += str(idx)
-                break
+    for element in string_word:
+        index_value = str(alpha_list.index(element) + 1)
+        num_rep += index_value
 
     for value in num_rep:
         if int(value) % 2 == 1:
@@ -90,9 +89,4 @@ def string_converter(string_word):
     return num_value
 
 
-print(
-    word_generator(
-        ["a", "p", "l", "r", "u", "i", "t", "s", "h", "e", "n", "g", "o", "f"],
-        ["apple", "fruits", "mango", "heal"],
-    )
-)
+print(string_converter("dog"))
